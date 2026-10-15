@@ -1,0 +1,64 @@
+/* Thiết lập box-sizing để thẻ padding và border không làm tăng width */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    /* Block level element: body mặc định là display: block */
+    display: block; 
+}
+
+h1 {
+    margin: 20px 0;
+    color: #333;
+}
+
+/* Áp dụng max-width để giới hạn chiều rộng nội dung, giúp web hiển thị đẹp trên màn hình lớn */
+nav, section, footer {
+    max-width: 1000px;
+    margin: 0 auto; /* Căn giữa các thẻ block có width/max-width */
+    display: block; /* Các thẻ HTML5 mặc định là block, khai báo để làm rõ mục tiêu bài học */
+}
+
+/* Luyện tập display: inline-block cho menu */
+nav a {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+}
+
+section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Luyện tập display: inline-block và width cho các cột */
+.box {
+    display: inline-block;
+    width: 30%; /* 3 cột, mỗi cột chiếm 30% chiều rộng của section */
+    padding: 30px 20px;
+    background-color: lightblue;
+    margin: 1%; /* Chừa lại không gian margin để không vượt quá 100% làm rớt dòng */
+    border-radius: 8px;
+    vertical-align: top; /* Giúp các cột luôn căn bằng mí trên cùng */
+}
+
+footer {
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+    margin-top: 20px;
+}
